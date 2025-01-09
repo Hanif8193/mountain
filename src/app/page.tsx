@@ -33,8 +33,8 @@ async function Home() {
       </section>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 md: lg: gap-5 px-10">
-        {data.map((data: Mountain) => (
-          <h2>
+        {data.map((data: Mountain,index) => (
+        <div  key={index}>
             <Image
               src={urlFor(data.image).url()}
               alt="Img"
@@ -53,7 +53,7 @@ async function Home() {
 
               </p>{" "}
             </Link>
-          </h2>
+          </div>
         ))}
       </div>
     </div>
